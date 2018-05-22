@@ -13,6 +13,9 @@
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+body{
+    background-image: url("../images/nice_snow_@2X.png");
+}
 h1 {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
@@ -77,9 +80,10 @@ a {
 }
 
 section {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     border: solid 1px #dddddd;
+    background-color: #ffffff;
 }
 
 .section-margin {
@@ -91,6 +95,15 @@ section {
     border-bottom: solid 2px #cccccc;
     height: 75px;
     margin-bottom: 25px;
+    font-size: 20px;
+}
+
+img {
+    width: 250px;
+    height: auto;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 footer {
@@ -108,4 +121,5 @@ footer {
     content: "";
     display: block;
     clear: both;
+    overflow: auto;
   }
