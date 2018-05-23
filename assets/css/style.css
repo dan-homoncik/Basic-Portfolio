@@ -30,6 +30,7 @@ div, p {
     background-color: #ffffff;
     border-bottom: solid 2px #cccccc;
     height: 125px;
+    position: relative;
 }
 
 /*declare header dimensions*/
@@ -58,18 +59,21 @@ div, p {
     left: 10%;
     right: 10%;
 }
+
 .navbar {
-    text-align: center;
-    overflow: auto;
+    text-align: right;
+    overflow: hidden;
     float: right;
-    height: 100%;
     width: 33%;
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
 }
 
 /*removed bullets from the list */
 li, ul {
-    float: left;
-    list-style: none;    
+    list-style: none;
+    display: inline-block;
 }
 
 /* removed pesky blue underline from links. 
@@ -77,6 +81,24 @@ Seems the color must be declared again, perhaps an overriding style? */
 a {
     color: #777777;
     text-decoration: none;
+}
+
+footer {
+    height: 75px;
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #666666;
+    border-top: solid 4px #4aaaa5;
+
+}
+
+/* Clearfix, you know */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: auto;
 }
 
 section {
@@ -106,20 +128,58 @@ img {
     padding-bottom: 20px;
 }
 
-footer {
-    height: 75px;
-    text-align: center;
-    font-size: 12px;
-    color: #ffffff;
-    background-color: #666666;
-    border-top: solid 4px #4aaaa5;
+/*declaration of userform styles. Researched at W3Schools */
 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-/* Clearfix, you know */
-.clearfix::after {
+input[type=submit] {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #4aaaa5;
+}
+
+/*column layout using max height and padding on portfolio page*/
+
+.column{
+    float: left;
+    width: 33.33%;
+    position: relative;
+}
+
+.row:after {
     content: "";
-    display: block;
+    display: table;
+    padding-bottom: 15px;
     clear: both;
-    overflow: auto;
-  }
+}
+
+.portfolio-container {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    background-color:#4aaaa5;
+    overflow: hidden;
+    height: 50px;
+    width: 230px;
+    line-height: 50px;
+    display: inline-block;
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+}
